@@ -10,7 +10,7 @@ use yii\web\HttpException;
 
 
 /**
- * grupgruplama module definition class
+  * grupgruplama module definition class
  */
 class Module extends \kouosl\base\Module
 {
