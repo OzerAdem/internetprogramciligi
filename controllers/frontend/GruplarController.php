@@ -64,6 +64,7 @@ class GruplarController extends Controller
      * @return mixed
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function actionCreate()
     {
         $model = new Gruplar();
@@ -79,6 +80,9 @@ class GruplarController extends Controller
 =======
 
 >>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
+=======
+
+>>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
 
     /**
      * Updates an existing Gruplar model.
@@ -87,6 +91,7 @@ class GruplarController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function actionUpdate($id)
     {
@@ -103,6 +108,9 @@ class GruplarController extends Controller
 =======
 
 >>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
+=======
+
+>>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
 
     /**
      * Deletes an existing Gruplar model.
@@ -111,6 +119,7 @@ class GruplarController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function actionDelete($id)
     {
@@ -123,6 +132,9 @@ class GruplarController extends Controller
         }
         return $this->redirect(['index']);
     }
+=======
+
+>>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
 =======
 
 >>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
