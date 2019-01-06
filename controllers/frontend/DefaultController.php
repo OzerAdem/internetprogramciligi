@@ -2,6 +2,7 @@
 namespace kouosl\grupgruplama\controllers\frontend;
 
 
+
 /**
  * Default controller for the `grupgruplama` module
  */
