@@ -2,6 +2,7 @@
 branch olarak develop master gibi kullanıldı.Bu yüzden master yerine developa atıldı.
 
 Admin Paaneline giriş yapmak için aşağıdaki URL'den girebilirsiniz.
+
 Url : http://portal.kouosl/admin/grupgruplama
 
 Ana Sayfa
