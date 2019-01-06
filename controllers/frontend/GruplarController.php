@@ -1,6 +1,6 @@
 <?php
 
-namespace kouosl\grupgruplama\controllers\backend;
+namespace kouosl\grupgruplama\controllers\frontend;
 
 use Yii;
 use kouosl\grupgruplama\models\Gruplar;
@@ -63,6 +63,7 @@ class GruplarController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+<<<<<<< HEAD
     public function actionCreate()
     {
         $model = new Gruplar();
@@ -75,6 +76,9 @@ class GruplarController extends Controller
             'model' => $model,
         ]);
     }
+=======
+
+>>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
 
     /**
      * Updates an existing Gruplar model.
@@ -83,6 +87,7 @@ class GruplarController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+<<<<<<< HEAD
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
@@ -95,6 +100,9 @@ class GruplarController extends Controller
             'model' => $model,
         ]);
     }
+=======
+
+>>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
 
     /**
      * Deletes an existing Gruplar model.
@@ -103,6 +111,7 @@ class GruplarController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+<<<<<<< HEAD
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
@@ -114,6 +123,9 @@ class GruplarController extends Controller
         }
         return $this->redirect(['index']);
     }
+=======
+
+>>>>>>> 7e291716f52dbb032a90bd720725bd5255bb6787
 //
     /**
      * Finds the Gruplar model based on its primary key value.

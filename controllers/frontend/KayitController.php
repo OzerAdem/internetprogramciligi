@@ -1,19 +1,18 @@
 <?php
 
-namespace kouosl\grupgruplama\controllers\backend;
+namespace kouosl\grupgruplama\controllers\frontend;
 
 use Yii;
-use kouosl\grupgruplama\models\Gruplar;
 use kouosl\grupgruplama\models\Kayit;
-use kouosl\grupgruplama\models\GruplarSearch;
+use kouosl\grupgruplama\models\KayitSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * GruplarController implements the CRUD actions for Gruplar model.
+ * KayitController implements the CRUD actions for Kayit model.
  */
-class GruplarController extends Controller
+class KayitController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -31,12 +30,12 @@ class GruplarController extends Controller
     }
 
     /**
-     * Lists all Gruplar models.
+     * Lists all Kayit models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new GruplarSearch();
+        $searchModel = new KayitSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -46,7 +45,7 @@ class GruplarController extends Controller
     }
 
     /**
-     * Displays a single Gruplar model.
+     * Displays a single Kayit model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -59,72 +58,44 @@ class GruplarController extends Controller
     }
 
     /**
-     * Creates a new Gruplar model.
+     * Creates a new Kayit model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
-        $model = new Gruplar();
+    
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->grupid]);
-        }
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
+
 
     /**
-     * Updates an existing Gruplar model.
+     * Updates an existing Kayit model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->grupid]);
-        }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
-    }
+    
 
     /**
-     * Deletes an existing Gruplar model.
+     * Deletes an existing Kayit model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
-        
-        $deluser= Kayit::find()->where(['grup' => $id])->all();
-        //Grup tablosunda silinen tabloyu kayit tablosundan da silmek için yapıldı
-        foreach ($deluser as $value) {
-            $value->delete();
-        }
-        return $this->redirect(['index']);
-    }
-//
+
+
+
     /**
-     * Finds the Gruplar model based on its primary key value.
+     * Finds the Kayit model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Gruplar the loaded model
+     * @return Kayit the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Gruplar::findOne($id)) !== null) {
+        if (($model = Kayit::findOne($id)) !== null) {
             return $model;
         }
 
