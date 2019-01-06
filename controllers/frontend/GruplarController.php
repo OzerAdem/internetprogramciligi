@@ -1,6 +1,6 @@
 <?php
 
-namespace kouosl\grupgruplama\controllers\backend;
+namespace kouosl\grupgruplama\controllers\frontend;
 
 use Yii;
 use kouosl\grupgruplama\models\Gruplar;
@@ -63,18 +63,7 @@ class GruplarController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
-        $model = new Gruplar();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->grupid]);
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
 
     /**
      * Updates an existing Gruplar model.
@@ -83,18 +72,7 @@ class GruplarController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->grupid]);
-        }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
-    }
 
     /**
      * Deletes an existing Gruplar model.
@@ -103,17 +81,7 @@ class GruplarController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
-        
-        $deluser= Kayit::find()->where(['grup' => $id])->all();
-        //Grup tablosunda silinen tabloyu kayit tablosundan da silmek için yapıldı
-        foreach ($deluser as $value) {
-            $value->delete();
-        }
-        return $this->redirect(['index']);
-    }
+
 //
     /**
      * Finds the Gruplar model based on its primary key value.

@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Sil', ['delete', 'id' => $model->grupid], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Silmek istediginize emin misiniz?',
+                'confirm' => 'Silmek istediğinize emin misiniz?',
                 'method' => 'post',
             ],
         ]) ?>
