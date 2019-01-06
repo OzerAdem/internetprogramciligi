@@ -1,6 +1,6 @@
 <?php
 
-namespace kouosl\grupgruplama\controllers\backend;
+namespace kouosl\grupgruplama\controllers\frontend;
 
 use Yii;
 use kouosl\grupgruplama\models\Gruplar;

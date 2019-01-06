@@ -5,12 +5,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model vendor\kouosl\models\Gruplar */
 
-$this->title = 'Grubu Guncelle: ' . $model->grupid;
+$this->title = 'Create Gruplar';
 $this->params['breadcrumbs'][] = ['label' => 'Gruplars', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->grupid, 'url' => ['view', 'id' => $model->grupid]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="gruplar-update">
+<div class="gruplar-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
